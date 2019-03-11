@@ -1,6 +1,6 @@
 package exercises
 
-abstract class ListImplementation {
+abstract class ListImplementation[+A] {
 
   /*
      singly linked list
@@ -11,29 +11,29 @@ abstract class ListImplementation {
      toString => a string representation
    */
 
-  def head: Int
-  def tail: ListImplementation
+  def head: A
+  def tail: ListImplementation[A]
   def isEmpty: Boolean
-  def add(element: Int): ListImplementation
+  def add[B >: A](element: B): ListImplementation[B]
 
   def printElements: String
   override def toString: String = "[" + printElements + "]"
 
 }
 
-object Empty extends ListImplementation {
-  def head: Int = throw new NoSuchElementException
-  def tail: ListImplementation = throw new NoSuchElementException
+object Empty extends ListImplementation[Nothing] {
+  def head = throw new NoSuchElementException
+  def tail: ListImplementation[Nothing] = throw new NoSuchElementException
   def isEmpty: Boolean = true
-  def add(element: Int): ListImplementation = new NonEmpty(element, Empty)
+  def add[B >: Nothing](element: B): ListImplementation[B] = new NonEmpty(element, Empty)
   def printElements: String = ""
 }
 
-class NonEmpty(h: Int, t: ListImplementation) extends ListImplementation {
+class NonEmpty[+A](h: A, t: ListImplementation[A]) extends ListImplementation[A] {
   def head = h
-  def tail: ListImplementation = t
+  def tail: ListImplementation[A] = t
   def isEmpty: Boolean = false
-  def add(element: Int): ListImplementation = new NonEmpty(element, this)
+  def add[B >: A](element: B): ListImplementation[B] = new NonEmpty(element, this)
   def printElements: String =
     if(t.isEmpty) "" + h
     else h + " " + t.printElements
@@ -42,8 +42,11 @@ class NonEmpty(h: Int, t: ListImplementation) extends ListImplementation {
 
 object ListTest extends App {
   // Empty is an object - it has only 1 reference and acts as a singleton
-  val list = new NonEmpty(1, Empty)
+  val list = new NonEmpty[Int](1, Empty)
   println(list.head)
   val newList = list.add(4)
-  print(newList.toString)
+  println(newList.toString)
+
+  val listString = new NonEmpty[String]("test", Empty)
+  println(listString.toString)
 }
