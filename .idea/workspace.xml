@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45d59a0a-7bca-4c83-8616-4892225eeb2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/course/part2oop/AnonymousClasses.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/course/part2oop/CaseClasses.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/course/part2oop/Exceptions.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/course/part2oop/PackagingAndImports.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/course/part2oop/package.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/exercises/ListImplementation.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/exercises/ListImplementation.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/exercises/Empty$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/exercises/Empty$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/exercises/Empty.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/exercises/Empty.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/exercises/ListImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/exercises/ListImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/exercises/ListTest$$anon$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/exercises/ListTest$$anon$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/exercises/ListTest$$anon$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/exercises/ListTest$$anon$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/exercises/ListTest$$anon$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/exercises/ListTest$$anon$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/exercises/ListTest$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/exercises/ListTest$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/exercises/ListTest$delayedInit$body.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/exercises/ListTest$delayedInit$body.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/exercises/NonEmpty.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/exercises/NonEmpty.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,82 +36,82 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/course/part1basics/StringOps.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/exercises/ListImplementation.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+            <state relative-caret-position="165">
+              <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/course/part2oop/OOBasics.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/course/part1basics/Expressions.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="120">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/course/part2oop/OOBasicsExercises.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/course/part2oop/Exceptions.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+            <state relative-caret-position="45">
+              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/course/part2oop/MethodNotations.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/course/part1basics/Recursion.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+            <state relative-caret-position="318">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/course/part2oop/Objects.scala">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/course/part2oop/PackagingAndImports.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
+            <state relative-caret-position="240">
               <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/course/part2oop/Inheritance.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/course/part2oop/package.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+            <state relative-caret-position="90">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/course/part2oop/AbstractDataTypes.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/course/part1basics/ValuesVariablesTypes.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="35" column="75" selection-start-line="35" selection-start-column="75" selection-end-line="35" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/exercises/ListImplementation.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+            <state relative-caret-position="318">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/course/part2oop/AnonymousClasses.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/course/part1recap/GeneralRecap.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="23" column="83" selection-start-line="23" selection-start-column="83" selection-end-line="23" selection-end-column="83" />
+            <state relative-caret-position="203">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/course/part1basics/CallBy.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -107,13 +119,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/course/part2oop/Generics.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="150">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Package Object" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -140,7 +159,12 @@
         <option value="$PROJECT_DIR$/src/main/scala/course/part2oop/AbstractDataTypes.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/course/part2oop/Generics.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/course/part2oop/AnonymousClasses.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/course/part2oop/CaseClasses.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/exercises/ListImplementation.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/course/part2oop/PocketCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/course/part2oop/Exceptions.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/course/part2oop/package.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/course/part2oop/PackagingAndImports.scala" />
       </list>
     </option>
   </component>
@@ -195,6 +219,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
               <item name="course" type="462c0819:PsiDirectoryNode" />
+              <item name="part1basics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scala" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="course" type="462c0819:PsiDirectoryNode" />
+              <item name="part1recap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scala" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="course" type="462c0819:PsiDirectoryNode" />
               <item name="part2oop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -214,7 +256,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552341380221" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552346676910" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -228,22 +270,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ListTest">
-    <configuration name="AbstractDataTypes" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="part2oop.AbstractDataTypes" />
-      <module name="scala" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="part2oop.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AnonymousClasses" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="course.part2oop.AnonymousClasses" />
+  <component name="RunManager" selected="Application.PackagingAndImports">
+    <configuration name="Calculator" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="course.part2oop.Calculator" />
       <module name="scala" />
       <extension name="coverage">
         <pattern>
@@ -255,12 +284,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InheritanceAndTraits" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="part2oop.InheritanceAndTraits" />
+    <configuration name="CaseClasses" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="course.part2oop.CaseClasses" />
       <module name="scala" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="part2oop.*" />
+          <option name="PATTERN" value="course.part2oop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exceptions" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="course.part2oop.Exceptions" />
+      <module name="scala" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="course.part2oop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -281,12 +323,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Objects" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="part2oop.Objects" />
+    <configuration name="PackagingAndImports" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="course.part2oop.PackagingAndImports" />
       <module name="scala" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="part2oop.*" />
+          <option name="PATTERN" value="course.part2oop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -296,11 +338,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PackagingAndImports" />
+        <item itemvalue="Application.Calculator" />
+        <item itemvalue="Application.Exceptions" />
         <item itemvalue="Application.ListTest" />
-        <item itemvalue="Application.AnonymousClasses" />
-        <item itemvalue="Application.AbstractDataTypes" />
-        <item itemvalue="Application.InheritanceAndTraits" />
-        <item itemvalue="Application.Objects" />
+        <item itemvalue="Application.CaseClasses" />
       </list>
     </recent_temporary>
   </component>
@@ -398,31 +440,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/course/part1recap/GeneralRecap.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/course/part1basics/CallBy.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/course/part1basics/DefaultArgs.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/course/part1basics/ValuesVariablesTypes.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
@@ -434,24 +455,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/course/part1basics/Expressions.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/course/part1basics/Functions.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
           <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/course/part1basics/Recursion.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
         </state>
       </provider>
     </entry>
@@ -511,10 +518,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/course/part2oop/Generics.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/course/part2oop/CaseClasses.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="263">
+          <caret line="37" column="44" lean-forward="true" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -525,10 +532,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/exercises/ListImplementation.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/course/part1basics/CallBy.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/course/part2oop/PocketCalculator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/course/part2oop/Exceptions.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/course/part1recap/GeneralRecap.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/course/part1basics/ValuesVariablesTypes.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/course/part1basics/Recursion.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/course/part1basics/Expressions.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/course/part2oop/Generics.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/exercises/ListImplementation.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/course/part2oop/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/course/part2oop/PackagingAndImports.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
