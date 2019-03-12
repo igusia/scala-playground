@@ -7,22 +7,22 @@ abstract class ListImplementation[+A] {
   def isEmpty: Boolean
   def add[B >: A](element: B): ListImplementation[B]
 
-  def map[B](transformer: Transformer[A, B]): ListImplementation[B]
-  def filter(predicate: Predicate[A]): ListImplementation[A]
-  def flatMap[B](transformer: Transformer[A, ListImplementation[B]]): ListImplementation[B]
+  // higher-order functions
+  def map[B](transformer: A => B): ListImplementation[B]
+  def filter(predicate: A => Boolean): ListImplementation[A]
+  def flatMap[B](transformer: A => ListImplementation[B]): ListImplementation[B]
 
   def printElements: String
   override def toString: String = "[" + printElements + "]"
 
   def ++[B >: A](list: ListImplementation[B]): ListImplementation[B]
-}
 
-trait Predicate[-T] {
-  def test(value: T): Boolean
-}
+  def foreach(func: A => Unit)
+  def sort(sorting: (A, A) => Int): ListImplementation[A]
 
-trait Transformer[-A, B] {
-  def transform(value: A): B
+  def zipWith[B, C](list: ListImplementation[B], zip: (A, B) => C): ListImplementation[C]
+  def fold[B](start: B)(operator: (B, A) => B) : B
+
 }
 
 case object Empty extends ListImplementation[Nothing] {
@@ -32,11 +32,22 @@ case object Empty extends ListImplementation[Nothing] {
   def add[B >: Nothing](element: B): ListImplementation[B] = NonEmpty(element, Empty)
   def printElements: String = ""
 
-  def map[B](transformer: Transformer[Nothing, B]): ListImplementation[B] = Empty
-  def filter(predicate: Predicate[Nothing]): ListImplementation[Nothing] = Empty
-  def flatMap[B](transformer: Transformer[Nothing, ListImplementation[B]]): ListImplementation[B] = Empty
+  def map[B](transformer: Nothing => B): ListImplementation[B] = Empty
+  def filter(predicate: Nothing => Boolean): ListImplementation[Nothing] = Empty
+  def flatMap[B](transformer: Nothing => ListImplementation[B]): ListImplementation[B] = Empty
 
   def ++[B >: Nothing](list: ListImplementation[B]): ListImplementation[B] = list
+
+  def foreach(func: Nothing => Unit) = ()
+
+  def sort(sorting: (Nothing, Nothing) => Int): ListImplementation[Nothing] = Empty
+
+  def zipWith[B, C](list: ListImplementation[B], zip: (Nothing, B) => C) = {
+    if (!list.isEmpty) throw new RuntimeException("non-empty list")
+    else Empty
+  }
+  def fold[B](start: B)(operator: (B, Nothing) => B) : B = start
+
 }
 
 case class NonEmpty[+A](h: A, t: ListImplementation[A]) extends ListImplementation[A] {
@@ -48,19 +59,43 @@ case class NonEmpty[+A](h: A, t: ListImplementation[A]) extends ListImplementati
     if(t.isEmpty) "" + h
     else h + " " + t.printElements
 
-  def map[B](transformer: Transformer[A, B]): ListImplementation[B] = {
-    NonEmpty(transformer.transform(h), t.map(transformer))
+  def map[B](transformer: A => B): ListImplementation[B] = {
+    NonEmpty(transformer(h), t.map(transformer))
   }
 
-  def filter(predicate: Predicate[A]): ListImplementation[A] = {
-    if(predicate.test(h)) NonEmpty(h, t.filter(predicate))
+  def filter(predicate: A => Boolean): ListImplementation[A] = {
+    if(predicate(h)) NonEmpty(h, t.filter(predicate))
     else t.filter(predicate)
   }
 
   def ++[B >: A](list: ListImplementation[B]): ListImplementation[B] = NonEmpty[B](h, t ++ list)
 
-  def flatMap[B](transformer: Transformer[A, ListImplementation[B]]): ListImplementation[B] = {
-    transformer.transform(h) ++ t.flatMap(transformer)
+  def flatMap[B](transformer: A => ListImplementation[B]): ListImplementation[B] = {
+    transformer(h) ++ t.flatMap(transformer)
+  }
+
+  def foreach(func: A => Unit)= {
+    func(h)
+    t.foreach(func)
+  }
+
+  def sort(sorting: (A, A) => Int): ListImplementation[A] = {
+    def insert(x: A, sortedList: ListImplementation[A]): ListImplementation[A] = {
+      if (sortedList.isEmpty) NonEmpty(x, Empty)
+      else if (sorting(x, sortedList.head) < 0) NonEmpty(x, sortedList)
+      else NonEmpty(sortedList.head, insert(x, sortedList.tail))
+    }
+    val sortedTail = t.sort(sorting)
+    insert(h, sortedTail)
+  }
+
+  def zipWith[B, C](list: ListImplementation[B], zip: (A, B) => C): ListImplementation[C] = {
+    if (list.isEmpty) throw new RuntimeException("lists do not have the same length")
+    else NonEmpty(zip(h, list.head), t.zipWith(list.tail, zip))
+  }
+
+  def fold[B](start: B)(operator: (B, A) => B): B = {
+    t.fold(operator(start, h))(operator)
   }
 }
 
@@ -76,16 +111,19 @@ object ListTest extends App {
 
   val listIntegers: ListImplementation[Int] = NonEmpty[Int](4, Empty)
 
-  println(listIntegers.map(new Transformer[Int, Int] {
-    override def transform(value: Int): Int = value * 2
-  }))
+  println(listIntegers.map(_ * 2))
+  println(listIntegers.filter(_ % 2 == 0))
 
-  println(listIntegers.filter(new Predicate[Int] {
-    override def test(value: Int): Boolean = value % 2 == 0
-  }))
+  println(listIntegers.flatMap(x => NonEmpty(x, NonEmpty(x + 1, Empty))))
 
-  println(listIntegers.flatMap(new Transformer[Int, ListImplementation[Int]] {
-    override def transform(value: Int): ListImplementation[Int] = NonEmpty[Int](value, NonEmpty[Int](value + 1, Empty))
-  }))
+  listIntegers.foreach(println)
+
+  val listInts = NonEmpty(1, NonEmpty(0, NonEmpty(5, NonEmpty(2, Empty))))
+  println(listInts.sort((x: Int, y: Int) => y - x))
+  val listToZip = NonEmpty(3, NonEmpty(2, NonEmpty(1, NonEmpty(4, Empty))))
+  println(listInts.zipWith[Int, Int](listToZip, (x, y) => x + y))
+
+  println(listInts.fold[Int](0)(_ + _))
+  println(listInts.fold[Int](1)(_ * _))
 
 }
